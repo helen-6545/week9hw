@@ -7,7 +7,7 @@ const prisma = new PrismaClient()
 const videos = await prisma.video.findMany()
 
 const videoList = videos.map((video) =>
-<li key = "name">{video.name}</li> )
+<li>{video.name}</li> )
 
 
 return( <>
