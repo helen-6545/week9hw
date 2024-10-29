@@ -6,8 +6,9 @@ export default async function Page( ) {
 const prisma = new PrismaClient()
 const videos = await prisma.video.findMany()
 
-const videoList = videos.map((video) =>
-<li>{video.name}</li> )
+const videoList = videos.map((video, index) =>
+<li key = {index}>{video.name}</li> 
+)
 
 
 return( <>
