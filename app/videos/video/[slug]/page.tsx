@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-//import VideoInfo from './VideoDisplay'
+
 import { redirect } from 'next/navigation';
 
 
@@ -20,8 +20,7 @@ export default function Page( {params}: { params: { slug: number } } ) {
         redirect('/')
     }
 
-   // return(<div>
-     //   <VideoInfo videoId={params.slug} />
+  
      return(<div>
         <form action={createVideo}>
             <label>Video Name: <input type="text" name="videoname" placeholder="Name" /></label>
