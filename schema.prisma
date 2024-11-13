@@ -14,3 +14,13 @@ model Video {
   votes     Int
   length    Int
 }
+
+model Card {
+  id               Int      @id @default(autoincrement())
+  prompt           String
+  Answer           String
+  AnswerReversed   String
+  image            String
+  difficulty       Int
+  scheduledTime    Int
+}
